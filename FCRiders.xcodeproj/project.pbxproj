@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D8BE9360307D3228007C726B /* MBAkit in Frameworks */ = {isa = PBXBuildFile; productRef = D8BE935F307D3228007C726B /* MBAkit */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		D8BE9332307D2693007C726B /* FCRiders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FCRiders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8BE9360307D3228007C726B /* MBAkit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,7 @@
 			);
 			name = FCRiders;
 			packageProductDependencies = (
+				D8BE935F307D3228007C726B /* MBAkit */,
 			);
 			productName = FCRiders;
 			productReference = D8BE9332307D2693007C726B /* FCRiders.app */;
@@ -107,6 +113,9 @@
 			);
 			mainGroup = D8BE9329307D2693007C726B;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				D8BE935E307D3228007C726B /* XCRemoteSwiftPackageReference "MBA-kit" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D8BE9333307D2693007C726B /* Products */;
 			projectDirPath = "";
@@ -341,6 +350,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D8BE935E307D3228007C726B /* XCRemoteSwiftPackageReference "MBA-kit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MBKwon/MBA-kit.git";
+			requirement = {
+				kind = exactVersion;
+				version = 0.9.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D8BE935F307D3228007C726B /* MBAkit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D8BE935E307D3228007C726B /* XCRemoteSwiftPackageReference "MBA-kit" */;
+			productName = MBAkit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D8BE932A307D2693007C726B /* Project object */;
 }
