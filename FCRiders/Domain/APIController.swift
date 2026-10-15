@@ -8,7 +8,8 @@
 import Foundation
 import MBAkit
 
-// json-server --host 192.168.100.76 --port 3000 --watch db.json
+// json-server --host localhost --port 3000 --watch db.json
+// json-server db.json --port 3000
 enum APIController {
     static let shared = API(with: API.APIDomainInfo(scheme: "http",
                                                     host: "localhost", //192.168.100.76",
