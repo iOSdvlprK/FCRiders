@@ -130,14 +130,14 @@ extension OrderDetailViewDelegate: UITableViewDataSource {
 
                 if let cell = cell as? OrderDetailMapViewCell {
                     if let routes = routes {
-//                        cell.drawRoute(routeData: routes)
+                        cell.drawRoute(routeData: routes)
                     }
 //                    cell.bindNavigationAction(self.presentDirectionActionSheet(with: detailInfo))
-//                    cell.bindRouteAction {
-//                        let trackOrderSegue = OrderDetailViewController.SegueIdentifier.trackOrder
-//                        self.viewController.performSegue(withIdentifier: trackOrderSegue,
-//                                                         sender: detailInfo)
-//                    }
+                    cell.bindRouteAction {
+                        let trackOrderSegue = OrderDetailViewController.SegueIdentifier.trackOrder
+                        self.viewController.performSegue(withIdentifier: trackOrderSegue,
+                                                         sender: detailInfo)
+                    }
                 }
                 return cell
 
