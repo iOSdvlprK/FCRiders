@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="login-screen-icon" translatesAutoresizingMaskIntoConstraints="NO" id="VJx-1e-WQf">
+                                <rect key="frame" x="141.66666666666666" y="300" width="110" height="64"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZp-4q-l95">
+                                <rect key="frame" x="46.666666666666657" y="634" width="300" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="p1p-9f-9UM"/>
+                                    <constraint firstAttribute="width" constant="300" id="xCu-qB-hwU"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Single Sign On"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lSi-Jo-Kue" userLabel="User Name Field">
+                                <rect key="frame" x="81.666666666666686" y="464" width="230" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="230" id="RuM-Jz-CAn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ys9-Hf-Ocz" userLabel="Password Field">
+                                <rect key="frame" x="81.666666666666686" y="538" width="230" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VJx-1e-WQf" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="3sp-Fa-h6b"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="bZp-4q-l95" secondAttribute="bottom" constant="115" id="Ad8-6o-fFb"/>
+                            <constraint firstItem="bZp-4q-l95" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Az8-M1-ZSv"/>
+                            <constraint firstItem="ys9-Hf-Ocz" firstAttribute="width" secondItem="lSi-Jo-Kue" secondAttribute="width" id="Xaw-aY-mZS"/>
+                            <constraint firstItem="VJx-1e-WQf" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-94" id="dno-qo-oIi"/>
+                            <constraint firstItem="ys9-Hf-Ocz" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="fmv-Jj-KAZ"/>
+                            <constraint firstItem="lSi-Jo-Kue" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="taf-yO-sUp"/>
+                            <constraint firstItem="bZp-4q-l95" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ys9-Hf-Ocz" secondAttribute="bottom" constant="30" id="u1s-ZU-pIH"/>
+                            <constraint firstItem="lSi-Jo-Kue" firstAttribute="top" secondItem="VJx-1e-WQf" secondAttribute="bottom" constant="100" id="wYK-3W-Y2k"/>
+                            <constraint firstItem="ys9-Hf-Ocz" firstAttribute="top" secondItem="lSi-Jo-Kue" secondAttribute="bottom" constant="40" id="ybq-dc-yno"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="131"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="login-screen-icon" width="110" height="64"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
