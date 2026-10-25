@@ -1,6 +1,15 @@
 {
-  "originHash" : "c22e885bf86c5f67f9ce95c4dd04e6d1a03798fb83c8fdefa913a48599db2673",
+  "originHash" : "f25feb9db97e43ea4e7d7484c3657c020c0c35a40adc2574d583f65858771a80",
   "pins" : [
+    {
+      "identity" : "keychainaccess",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kishikawakatsumi/KeychainAccess",
+      "state" : {
+        "revision" : "84e546727d66f1adc5439debad16270d0fdd04e7",
+        "version" : "4.2.2"
+      }
+    },
     {
       "identity" : "mba-kit",
       "kind" : "remoteSourceControl",
