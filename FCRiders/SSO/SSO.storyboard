@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="SSOViewController" customModule="FCRiders" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,7 +19,15 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="login-screen-icon" translatesAutoresizingMaskIntoConstraints="NO" id="VJx-1e-WQf">
                                 <rect key="frame" x="141.66666666666666" y="300" width="110" height="64"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZp-4q-l95">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O1Q-iK-ybx">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="dismissKeyboard" destination="Y6W-OH-hqX" eventType="touchDown" id="OLP-Yx-qXz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZp-4q-l95">
                                 <rect key="frame" x="46.666666666666657" y="634" width="300" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="p1p-9f-9UM"/>
@@ -27,8 +35,11 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Single Sign On"/>
+                                <connections>
+                                    <action selector="touchSSOButton" destination="Y6W-OH-hqX" eventType="touchUpInside" id="m8E-Uq-603"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lSi-Jo-Kue" userLabel="User Name Field">
+                            <textField opaque="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lSi-Jo-Kue" userLabel="User Name Field">
                                 <rect key="frame" x="81.666666666666686" y="464" width="230" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="230" id="RuM-Jz-CAn"/>
@@ -36,7 +47,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ys9-Hf-Ocz" userLabel="Password Field">
+                            <textField opaque="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ys9-Hf-Ocz" userLabel="Password Field">
                                 <rect key="frame" x="81.666666666666686" y="538" width="230" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -48,19 +59,28 @@
                             <constraint firstItem="VJx-1e-WQf" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="3sp-Fa-h6b"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="bZp-4q-l95" secondAttribute="bottom" constant="115" id="Ad8-6o-fFb"/>
                             <constraint firstItem="bZp-4q-l95" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Az8-M1-ZSv"/>
+                            <constraint firstItem="O1Q-iK-ybx" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Rkl-8Y-W2h"/>
+                            <constraint firstItem="O1Q-iK-ybx" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="XJm-Hf-iPB"/>
                             <constraint firstItem="ys9-Hf-Ocz" firstAttribute="width" secondItem="lSi-Jo-Kue" secondAttribute="width" id="Xaw-aY-mZS"/>
                             <constraint firstItem="VJx-1e-WQf" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-94" id="dno-qo-oIi"/>
                             <constraint firstItem="ys9-Hf-Ocz" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="fmv-Jj-KAZ"/>
+                            <constraint firstItem="O1Q-iK-ybx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="jK0-2v-1Bd"/>
                             <constraint firstItem="lSi-Jo-Kue" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="taf-yO-sUp"/>
                             <constraint firstItem="bZp-4q-l95" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ys9-Hf-Ocz" secondAttribute="bottom" constant="30" id="u1s-ZU-pIH"/>
                             <constraint firstItem="lSi-Jo-Kue" firstAttribute="top" secondItem="VJx-1e-WQf" secondAttribute="bottom" constant="100" id="wYK-3W-Y2k"/>
+                            <constraint firstAttribute="bottom" secondItem="O1Q-iK-ybx" secondAttribute="bottom" id="yEX-s5-Hqk"/>
                             <constraint firstItem="ys9-Hf-Ocz" firstAttribute="top" secondItem="lSi-Jo-Kue" secondAttribute="bottom" constant="40" id="ybq-dc-yno"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordField" destination="ys9-Hf-Ocz" id="OBP-C5-Xmg"/>
+                        <outlet property="ssoButton" destination="bZp-4q-l95" id="1e7-wb-5Qn"/>
+                        <outlet property="userNameField" destination="lSi-Jo-Kue" id="0N4-Ql-VKG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="131"/>
+            <point key="canvasLocation" x="-300" y="-186.61971830985917"/>
         </scene>
     </scenes>
     <resources>
